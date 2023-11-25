@@ -20,6 +20,8 @@ const Index = () => {
         dispatch(changeStatus(index))
     }
 
+    console.log(todos)
+
     return (
         <div className="m-12 p-6 rounded relative">
             {/* To Do Create */}

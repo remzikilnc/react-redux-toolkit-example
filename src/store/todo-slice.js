@@ -25,10 +25,13 @@ export const todoSlice = createSlice({
                     todo.status = !todo.status
                 }
             })
-        }
+        },
+        addTodosFromLocalStorage: (state, action) => {
+            state.todos = action.payload;
+        },
     },
 })
 
-export const {addTodo, delTodo, changeStatus} = todoSlice.actions
+export const {addTodo, delTodo, changeStatus, addTodosFromLocalStorage} = todoSlice.actions
 
 export default todoSlice.reducer
